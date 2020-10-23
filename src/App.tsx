@@ -1,26 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Nav from "react-bootstrap/Nav";
+import Container from "react-bootstrap/Container";
+import { Router, Switch, Route } from "react-router-dom";
 
-function App() {
+import history from "./utils/history";
+
+import LeftNav from "./LeftNav";
+import Blog from "./Blog/Blog";
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-vh-100 bg-dark text-light p-4">
+      <a className="h5 text-light" href="/home">
+        Teodor's Portfolio.
+      </a>
+      <div className="d-flex">
+        <LeftNav />
+        <Router history={history}>
+          <Container className="bg-dark p-4">
+            <Switch>
+              <Route path="/blog" component={Blog} />
+            </Switch>
+          </Container>
+        </Router>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
