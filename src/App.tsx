@@ -5,26 +5,25 @@ import { Router, Switch, Route } from "react-router-dom";
 
 import history from "./utils/history";
 
-import LeftNav from "./LeftNav";
+import NavBar from "./NavBar";
 import Blog from "./Blog/Blog";
 
 const App = () => {
   return (
-    <div className="min-vh-100 bg-dark text-light p-4">
-      <a className="h5 text-light" href="/home">
-        Teodor's Portfolio.
-      </a>
-      <div className="d-flex">
-        <LeftNav />
-        <Router history={history}>
-          <Container className="bg-dark p-4">
-            <Switch>
-              <Route path="/blog" component={Blog} />
-            </Switch>
-          </Container>
-        </Router>
+    <>
+      <NavBar />
+      <div className="min-vh-100 bg-dark text-light p-4">
+        <div className="d-flex">
+          <Router history={history}>
+            <Container className="bg-dark p-4">
+              <Switch>
+                <Route path="/blog" component={Blog} />
+              </Switch>
+            </Container>
+          </Router>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
