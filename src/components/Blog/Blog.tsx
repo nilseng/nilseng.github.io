@@ -5,7 +5,7 @@ import apartment from "./images/518_62667910.jpg";
 const Blog = () => {
   return (
     <>
-      <div className="my-4">
+      <div className="my-4 bg-dark rounded p-4">
         I'm Teodor Nilseng Danielsen. A Norwegian software engineer and
         economist. Send me an{" "}
         <a href="mailto:teodor.nilseng@gmail.com">email</a> if you're interested
