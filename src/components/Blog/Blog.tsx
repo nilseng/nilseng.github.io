@@ -21,7 +21,7 @@ const Blog = () => {
           :
         </p>
         I'm selling my my cute 25 square meter apartment today.
-        <img src={apartment} className="w-100" />
+        <img src={apartment} className="w-100" alt="apartment" />
       </div>
       <div className="py-4">
         <p className="text-muted">
