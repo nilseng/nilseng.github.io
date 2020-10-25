@@ -17,7 +17,7 @@ const App = () => {
           <Router history={history}>
             <Container className="bg-dark p-4">
               <Switch>
-                <Route path="/blog" component={Blog} />
+                <Route path="/" component={Blog} />
               </Switch>
             </Container>
           </Router>

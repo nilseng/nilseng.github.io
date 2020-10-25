@@ -57,6 +57,12 @@ const NavBar = () => {
               >
                 Randohub
               </Dropdown.Item>
+              <Dropdown.Item
+                href="https://www.strava.com/athletes/10361672"
+                target="_blank"
+              >
+                My Strava Profile
+              </Dropdown.Item>
             </DropdownButton>
           </Nav.Item>
         </Nav>
