@@ -14,9 +14,14 @@ const App = () => {
     <>
       <Router history={history}>
         <NavBar />
-        <BackgroundAnimation />
         <Container className="p-4 appContainer">
           <Switch>
+            <Route
+              path="/"
+              exact
+              component={BackgroundAnimation}
+              postion={"absolute"}
+            />
             <Route path="/blog" component={Blog} />
           </Switch>
         </Container>

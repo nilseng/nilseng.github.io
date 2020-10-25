@@ -84,7 +84,7 @@ const BackgroundAnimation = () => {
       <div
         ref={mainEl}
         className="h-100 w-100"
-        style={{ position: "absolute", top: 0, zIndex: -1 }}
+        style={{ position: "absolute", top: 0, left: 0, zIndex: -1 }}
       ></div>
     </>
   );
