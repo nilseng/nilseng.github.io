@@ -37,7 +37,7 @@ const init = (mainEl: React.RefObject<HTMLDivElement>) => {
 
   // Adding light
   const pointLight = new THREE.PointLight(0xffffff, 2);
-  pointLight.position.set(1, 1, 10);
+  pointLight.position.set(1, 4, 10);
   pointLight.castShadow = true;
   scene.add(pointLight);
 
