@@ -15,6 +15,7 @@ const init = (mainEl: React.RefObject<HTMLDivElement>) => {
   camera.position.z = 10;
 
   scene = new THREE.Scene();
+  scene.background = new THREE.Color("#f8f9fa");
 
   //Create a plane that receives shadows (but does not cast them)
   var planeGeometry = new THREE.PlaneBufferGeometry(5, 5, 32, 32);
