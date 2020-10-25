@@ -5,8 +5,8 @@ import { Router, Switch, Route } from "react-router-dom";
 
 import history from "./utils/history";
 
-import NavBar from "./NavBar";
-import Blog from "./Blog/Blog";
+import NavBar from "./components/NavBar";
+import Blog from "./components/Blog/Blog";
 
 const App = () => {
   return (

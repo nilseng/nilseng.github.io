@@ -4,6 +4,8 @@ import Navbar from "react-bootstrap/Navbar";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/esm/Dropdown";
 
+import AnimatedLogo from "./AnimatedLogo";
+
 const NavBar = () => {
   return (
     <Navbar
@@ -12,7 +14,10 @@ const NavBar = () => {
       collapseOnSelect
       className="border-bottom border-primary"
     >
-      <Navbar.Brand href="/">Teodor's Portfolio</Navbar.Brand>
+      <Navbar.Brand href="/">
+        <AnimatedLogo color="#1c2e3f" height="2rem" width="2rem" />
+        Teodor's Portfolio
+      </Navbar.Brand>
       <Navbar.Toggle
         className="mb-2"
         aria-controls="basic-navbar-nav"
