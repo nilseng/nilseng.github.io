@@ -5,7 +5,6 @@ import { Router, Switch, Route } from "react-router-dom";
 import history from "./utils/history";
 
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
 import Blog from "./components/Blog/Blog";
 import BackgroundAnimation from "./components/BackgroundAnimation";
 
@@ -25,7 +24,6 @@ const App = () => {
             <Route path="/blog" component={Blog} />
           </Switch>
         </Container>
-        <Footer />
       </Router>
     </>
   );
