@@ -27,7 +27,7 @@ const init = (mainEl: React.RefObject<HTMLDivElement>) => {
   scene.add(floor);
 
   // Adding a sphere
-  const sphereGeometry = new THREE.SphereBufferGeometry(0.5, 32, 32);
+  const sphereGeometry = new THREE.SphereBufferGeometry(0.5, 16, 16);
   const sphereMaterial = new THREE.MeshStandardMaterial({ color: "#faf8f9" });
 
   sphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
@@ -42,8 +42,8 @@ const init = (mainEl: React.RefObject<HTMLDivElement>) => {
   scene.add(pointLight);
 
   //Set up shadow properties for the light
-  pointLight.shadow.mapSize.width = 5000;
-  pointLight.shadow.mapSize.height = 5000;
+  pointLight.shadow.mapSize.width = 2000;
+  pointLight.shadow.mapSize.height = 2000;
   pointLight.shadow.camera.near = 0.5;
   pointLight.shadow.camera.far = 500;
 
