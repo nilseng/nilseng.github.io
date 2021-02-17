@@ -1,5 +1,6 @@
 import React from "react";
 import BlogPost from "../Blog/BlogPost";
+import Container from "react-bootstrap/esm/Container";
 
 import pureokrsImg from "./images/pureokrs.png";
 import purewaccImg from "./images/purewacc.png";
@@ -7,7 +8,7 @@ import bcbookImg from "./images/backcountrybook.png";
 
 const Projects = () => {
   return (
-    <>
+    <Container className="py-4">
       <h2 className="text-light">Projects</h2>
       <BlogPost
         title="BackcountryBook.com"
@@ -36,7 +37,7 @@ const Projects = () => {
         picture={pureokrsImg}
         externalUrl="https://www.pureokrs.com"
       />
-    </>
+    </Container>
   );
 };
 

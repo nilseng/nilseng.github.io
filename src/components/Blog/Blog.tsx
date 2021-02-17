@@ -1,10 +1,11 @@
 import React from "react";
+import Container from "react-bootstrap/esm/Container";
 import BlogPost from "./BlogPost";
 import apartment from "./images/518_62667910.jpg";
 
 const Blog = () => {
   return (
-    <>
+    <Container>
       <div className="bg-dark text-light rounded p-4 my-4">
         I'm Teodor Nilseng Danielsen. A Norwegian software engineer and
         economist. Send me an{" "}
@@ -20,7 +21,7 @@ const Blog = () => {
           `The ball is rendered
           using three.js.`,
         ]}
-        link="/ball"
+        link="/3D?id=ball"
       />
       {/* <div className="bg-dark rounded p-4 my-4">
         <p className="text-muted">
@@ -54,7 +55,7 @@ const Blog = () => {
         title="Hello World!"
         content={["My very first blogpost."]}
       />
-    </>
+    </Container>
   );
 };
 
