@@ -50,7 +50,7 @@ const Box = (props: IProps) => {
       onPointerOut={(event) => setHover(false)}
     >
       <boxBufferGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color={hovered ? props.color : props.hoverColor} />
+      <meshStandardMaterial color={hovered ? props.hoverColor : props.color} />
     </mesh>
   );
 };
