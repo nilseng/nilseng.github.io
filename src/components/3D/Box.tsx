@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useFrame } from "react-three-fiber";
 import { Mesh } from "three";
 
@@ -7,18 +7,35 @@ interface IProps {
 }
 
 const Box = (props: IProps) => {
-  // This reference will give us direct access to the mesh
   const mesh = useRef<Mesh>();
 
-  // Set up state for the hovered and active state
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
   const [scale] = useState(Math.random());
 
-  // Rotate mesh every frame, this is outside of React without overhead
+  const [angle, setAngle] = useState<number>();
+
+  useEffect(() => {
+    if (mesh.current) {
+      setAngle(
+        Math.acos(
+          mesh.current.position.x /
+            Math.sqrt(
+              Math.pow(mesh.current.position.x, 2) +
+                Math.pow(mesh.current.position.y, 2)
+            )
+        ) * (Math.random() < 0.5 ? -1 : 1)
+      );
+    }
+  }, []);
+
   useFrame(() => {
-    if (mesh.current) mesh.current.rotation.x = mesh.current.rotation.y += 0.01;
+    if (mesh.current && (angle || angle === 0)) {
+      mesh.current.position.x = Math.cos(angle);
+      mesh.current.position.y = Math.sin(angle);
+      setAngle(angle + 0.01);
+    }
   });
 
   return (

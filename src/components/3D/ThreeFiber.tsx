@@ -1,6 +1,6 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
-import { getRandomColor } from "../common/utils";
+import { getRandomBlue } from "../common/utils";
 
 import Box from "./Box";
 
@@ -14,7 +14,7 @@ const ThreeFiber = () => {
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      {new Array(100).fill(1).map((_, i) => (
+      {new Array(20).fill(1).map((_, i) => (
         <Box
           key={i}
           position={[
@@ -22,8 +22,8 @@ const ThreeFiber = () => {
             Math.random() * 8 - 4,
             Math.random() * 8 - 4,
           ]}
-          color={getRandomColor()}
-          hoverColor={getRandomColor()}
+          color={getRandomBlue()}
+          hoverColor={getRandomBlue()}
         />
       ))}
     </Canvas>
