@@ -12,21 +12,14 @@ const RotatingSphere = (props: IProps) => {
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
-  const [scale] = useState(Math.random());
+  const [scale] = useState(0.2);
 
   const [angle, setAngle] = useState<number>();
 
   useEffect(() => {
     if (mesh.current) {
-      setAngle(
-        Math.acos(
-          mesh.current.position.x /
-            Math.sqrt(
-              Math.pow(mesh.current.position.x, 2) +
-                Math.pow(mesh.current.position.y, 2)
-            )
-        ) * (Math.random() < 0.5 ? -1 : 1)
-      );
+      setAngle(2 * Math.PI * Math.random());
+      mesh.current.position.z = Math.random() * 6 - 2;
     }
   }, []);
 
@@ -48,8 +41,10 @@ const RotatingSphere = (props: IProps) => {
       onClick={(event) => setActive(!active)}
       onPointerOver={(event) => setHover(true)}
       onPointerOut={(event) => setHover(false)}
+      castShadow
+      receiveShadow
     >
-      <sphereBufferGeometry args={[1, 32, 32]} />
+      <sphereBufferGeometry args={[1, 16, 16]} />
       <meshStandardMaterial color={hovered ? props.hoverColor : props.color} />
     </mesh>
   );

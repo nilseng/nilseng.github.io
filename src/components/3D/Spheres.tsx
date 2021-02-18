@@ -12,17 +12,9 @@ const Spheres = () => {
       }}
     >
       <ambientLight />
-      <pointLight position={[10, 10, 10]} />
-      {new Array(10).fill(1).map((_, i) => (
-        <RotatingSphere
-          key={i}
-          position={[
-            Math.random() * 8 - 4,
-            Math.random() * 8 - 4,
-            Math.random() * 8 - 4,
-          ]}
-          color={"#f8f9fa"}
-        />
+      <pointLight position={[5, 5, 10]} />
+      {new Array(100).fill(1).map((_, i) => (
+        <RotatingSphere key={i} color={"#f8f9fa"} />
       ))}
     </Canvas>
   );
