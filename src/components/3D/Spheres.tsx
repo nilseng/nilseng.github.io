@@ -1,10 +1,9 @@
 import React from "react";
 import { Canvas } from "react-three-fiber";
-import { getRandomColor } from "../common/utils";
 
-import Box from "./Box";
+import RotatingSphere from "./RotatingSphere";
 
-const ThreeFiber = () => {
+const Spheres = () => {
   return (
     <Canvas
       style={{
@@ -14,20 +13,19 @@ const ThreeFiber = () => {
     >
       <ambientLight />
       <pointLight position={[10, 10, 10]} />
-      {new Array(100).fill(1).map((_, i) => (
-        <Box
+      {new Array(10).fill(1).map((_, i) => (
+        <RotatingSphere
           key={i}
           position={[
             Math.random() * 8 - 4,
             Math.random() * 8 - 4,
             Math.random() * 8 - 4,
           ]}
-          color={getRandomColor()}
-          hoverColor={getRandomColor()}
+          color={"#f8f9fa"}
         />
       ))}
     </Canvas>
   );
 };
 
-export default ThreeFiber;
+export default Spheres;

@@ -6,7 +6,7 @@ interface IProps {
   [key: string]: any;
 }
 
-const Box = (props: IProps) => {
+const RotatingBox = (props: IProps) => {
   const mesh = useRef<Mesh>();
 
   const [hovered, setHover] = useState(false);
@@ -55,4 +55,4 @@ const Box = (props: IProps) => {
   );
 };
 
-export default Box;
+export default RotatingBox;

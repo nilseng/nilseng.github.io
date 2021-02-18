@@ -39,8 +39,9 @@ const NavBar = () => {
           </Nav.Item>
           <Nav.Item>
             <DropdownButton title="3D" variant="dark">
-              <Dropdown.Item href="/3D?id=ball">Falling Ball</Dropdown.Item>
+              <Dropdown.Item href="/spheres">Rotating Spheres</Dropdown.Item>
               <Dropdown.Item href="/boxes">Random boxes</Dropdown.Item>
+              <Dropdown.Item href="/3D?id=ball">Falling Ball</Dropdown.Item>
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
