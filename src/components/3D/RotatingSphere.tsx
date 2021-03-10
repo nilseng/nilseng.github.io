@@ -9,12 +9,12 @@ interface IProps {
 const RotatingSphere = (props: IProps) => {
   const mesh = useRef<Mesh>();
 
-  const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
   const [scale] = useState(0.2);
 
   const [angle, setAngle] = useState<number>();
+  const [direction] = useState<number>(Math.random() > 0.5 ? 1 : -1);
 
   useEffect(() => {
     if (mesh.current) {
@@ -27,7 +27,7 @@ const RotatingSphere = (props: IProps) => {
     if (mesh.current && (angle || angle === 0)) {
       mesh.current.position.x = Math.cos(angle);
       mesh.current.position.y = Math.sin(angle);
-      setAngle(angle + 0.01);
+      setAngle(angle + direction * 0.02);
     }
   });
 
@@ -38,14 +38,12 @@ const RotatingSphere = (props: IProps) => {
       scale={
         active ? [scale * 1.5, scale * 1.5, scale * 1.5] : [scale, scale, scale]
       }
-      onClick={(event) => setActive(!active)}
-      onPointerOver={(event) => setHover(true)}
-      onPointerOut={(event) => setHover(false)}
+      onClick={() => setActive(!active)}
       castShadow
       receiveShadow
     >
-      <sphereBufferGeometry args={[1, 16, 16]} />
-      <meshStandardMaterial color={hovered ? props.hoverColor : props.color} />
+      <sphereBufferGeometry args={[1, 32, 32]} />
+      <meshStandardMaterial color={props.color} />
     </mesh>
   );
 };

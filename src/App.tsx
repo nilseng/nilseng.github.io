@@ -8,7 +8,7 @@ import Blog from "./components/Blog/Blog";
 import Three from "./components/3D/Three";
 import Projects from "./components/Projects/Projects";
 import Boxes from "./components/3D/Boxes";
-import Spheres from "./components/3D/Spheres";
+import Scene from "./components/3D/Scene";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
           <Route path="/blog" component={Blog} />
           <Route path="/3D" component={Three} />
           <Route path="/boxes" component={Boxes} />
-          <Route path="/spheres" component={Spheres} />
+          <Route path="/three" component={Scene} />
         </Switch>
       </Router>
     </>
