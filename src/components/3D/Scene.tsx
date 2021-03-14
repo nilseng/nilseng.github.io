@@ -11,12 +11,14 @@ import {
 } from "react-three-fiber";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import Boxes from "./Boxes";
+import House from "./House/House";
 
 import Spheres from "./Spheres";
 
 const sceneContentMap: { [key: string]: JSX.Element } = {
   spheres: <Spheres />,
   boxes: <Boxes />,
+  house: <House />,
 };
 
 declare global {
@@ -57,7 +59,7 @@ const SceneControls = ({ setFps, sceneContent }: ISceneContentProps) => {
 
   return (
     <>
-      <orbitControls args={[camera, domElement]} />
+      <orbitControls args={[camera, domElement]} keyPanSpeed={20} />
       <ambientLight />
       <pointLight position={[5, 5, 10]} />
       {sceneContent}
