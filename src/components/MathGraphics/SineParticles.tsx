@@ -18,7 +18,7 @@ const SineParticles = () => {
             <animate
               attributeName="r"
               values={`${0.05 + i * 0.0001}`}
-              begin={`${i * 0.005}s`}
+              begin={`${i * 0.001}s`}
             />
           </circle>
           <circle
@@ -30,7 +30,7 @@ const SineParticles = () => {
             <animate
               attributeName="r"
               values={`${0.05 + i * 0.0001}`}
-              begin={`${0.005 * 2000 + i * 0.005}s`}
+              begin={`${0.001 * 2000 + i * 0.001}s`}
             />
           </circle>
         </g>
