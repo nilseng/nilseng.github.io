@@ -49,6 +49,16 @@ const NavBar = () => {
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
+            <DropdownButton title="Math Graphics" variant="dark">
+              <Dropdown.Item href="/mathematical-graphics/sine-particles">
+                Sine Particles
+              </Dropdown.Item>
+              <Dropdown.Item href="/mathematical-graphics/random-stars">
+                Blinking Stars
+              </Dropdown.Item>
+            </DropdownButton>
+          </Nav.Item>
+          <Nav.Item>
             <DropdownButton title="Productivity" variant="dark">
               <Dropdown.Item href="https://www.pureokrs.com" target="_blank">
                 Pure OKRs

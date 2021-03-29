@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
-import StarBackground from "../StarBackground";
+import StarBackground from "../MathGraphics/StarBackground";
 import BlogPost from "./BlogPost";
 import apartment from "./images/518_62667910.jpg";
 
