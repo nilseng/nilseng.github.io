@@ -10,19 +10,29 @@ const SineParticles = () => {
       {new Array(2000).fill(1).map((_, i) => (
         <g key={i}>
           <circle
-            r={0.05 + i * 0.0001}
             cx={i / 20}
             cy={((i / 20) * (Math.sin(i) + 1)) / 2}
             fill="#f8f9fa"
             opacity="50%"
-          ></circle>
+          >
+            <animate
+              attributeName="r"
+              values={`${0.05 + i * 0.0001}`}
+              begin={`${i * 0.005}s`}
+            />
+          </circle>
           <circle
-            r={0.05 + i * 0.0001}
             cx={(2000 - i) / 20}
             cy={((i / 20) * (Math.cos(i) + 1)) / 2}
             fill="#f8f9fa"
             opacity="50%"
-          ></circle>
+          >
+            <animate
+              attributeName="r"
+              values={`${0.05 + i * 0.0001}`}
+              begin={`${0.005 * 2000 + i * 0.005}s`}
+            />
+          </circle>
         </g>
       ))}
     </svg>
