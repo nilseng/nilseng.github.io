@@ -1,13 +1,13 @@
 import React, { useEffect, useRef } from "react";
-import { useThree } from "react-three-fiber";
-import { Mesh, DoubleSide, Vector3 } from "three";
+//import { useThree } from "react-three-fiber";
+import { Mesh, DoubleSide } from "three";
 
 const House = () => {
   const groundFloor = useRef<Mesh>();
 
   const firstFloor = useRef<Mesh>();
 
-  const houseLocation = new Vector3(0, -4, -4);
+  //const houseLocation = new Vector3(0, -4, -4);
 
   useEffect(() => {
     if (groundFloor.current) {
