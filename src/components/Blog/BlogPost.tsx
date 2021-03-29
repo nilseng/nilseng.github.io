@@ -37,7 +37,9 @@ const BlogPost = ({
           })}
         </p>
       )}
-      {picture && <img src={picture} className="w-100" alt="apartment" />}
+      {picture && (
+        <img src={picture} className="w-100 border-0" alt="apartment" />
+      )}
       <div className="text-light">
         {content.map((paragraph, i) => (
           <p key={i}>{paragraph}</p>
