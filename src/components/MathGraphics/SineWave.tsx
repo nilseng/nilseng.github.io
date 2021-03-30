@@ -16,7 +16,7 @@ const SineWave = () => {
               ${50 * (Math.sin((2 * Math.PI * i) / 1000) + 1)};
               ${50 * (Math.sin((2 * Math.PI * i) / 1000 + Math.PI) + 1)};
               ${50 * (Math.sin((2 * Math.PI * i) / 1000 + 2 * Math.PI) + 1)}`}
-              dur="2s"
+              dur="4s"
               repeatCount="indefinite"
             />
           </circle>
@@ -27,7 +27,7 @@ const SineWave = () => {
               ${50 * (Math.sin((2 * Math.PI * i) / 1000 + Math.PI) + 1)};
               ${50 * (Math.sin((2 * Math.PI * i) / 1000 + 2 * Math.PI) + 1)};
               ${50 * (Math.sin((2 * Math.PI * i) / 1000 + Math.PI) + 1)}`}
-              dur="4s"
+              dur="8s"
               repeatCount="indefinite"
             />
           </circle>
@@ -41,7 +41,7 @@ const SineWave = () => {
                 (Math.sin((2 * Math.PI * i) / 1000 + (3 * Math.PI) / 2) + 1)
               };
               ${50 * (Math.sin((2 * Math.PI * i) / 1000 + Math.PI / 2) + 1)}`}
-              dur="6s"
+              dur="16s"
               repeatCount="indefinite"
             />
           </circle>

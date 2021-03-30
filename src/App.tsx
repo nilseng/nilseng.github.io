@@ -9,7 +9,7 @@ import Three from "./components/3D/Three";
 import Projects from "./components/Projects/Projects";
 import Boxes from "./components/3D/Boxes";
 import Scene from "./components/3D/Scene";
-import MathGraphicsContainer from "./components/MathGraphics/MathGraphicsContainer";
+import MathGraphicsRouter from "./components/MathGraphics/MathGraphicsRouter";
 
 const App = () => {
   return (
@@ -22,10 +22,7 @@ const App = () => {
           <Route path="/3D" component={Three} />
           <Route path="/boxes" component={Boxes} />
           <Route path="/three" component={Scene} />
-          <Route
-            path="/mathematical-graphics"
-            component={MathGraphicsContainer}
-          />
+          <Route path="/mathematical-graphics" component={MathGraphicsRouter} />
         </Switch>
       </Router>
     </>
