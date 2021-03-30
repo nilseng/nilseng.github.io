@@ -50,8 +50,11 @@ const NavBar = () => {
           </Nav.Item>
           <Nav.Item>
             <DropdownButton title="Math Graphics" variant="dark">
-              <Dropdown.Item href="/mathematical-graphics/sine-particles">
-                Sine Particles
+              <Dropdown.Item href="/mathematical-graphics/sine-wave">
+                Sine Waves
+              </Dropdown.Item>
+              <Dropdown.Item href="/mathematical-graphics/sine-cosine-animation">
+                Sine Cosine Animation
               </Dropdown.Item>
               <Dropdown.Item href="/mathematical-graphics/random-stars">
                 Blinking Stars

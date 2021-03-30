@@ -1,6 +1,6 @@
 import React from "react";
 
-const SineParticles = () => {
+const SineCosineAnimation = () => {
   return (
     <svg
       className="position-fixed min-vh-100"
@@ -39,4 +39,4 @@ const SineParticles = () => {
   );
 };
 
-export default SineParticles;
+export default SineCosineAnimation;
