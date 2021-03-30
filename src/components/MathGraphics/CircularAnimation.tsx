@@ -9,18 +9,8 @@ const CircularAnimation = () => {
       viewBox="0 0 100 100"
       style={{ zIndex: -1 }}
     >
-      {new Array(50).fill(1).map((_, i) => (
-        <g key={i}>
-          <circle
-            r={0.1}
-            cx={cx + 20 + 20 * Math.cos((2 * Math.PI * i) / 100)}
-            cy={cy + 20 * Math.sin((2 * Math.PI * i) / 100)}
-            fill="#f8f9fa"
-          />
-        </g>
-      ))}
-      {new Array(51).fill(1).map((_, i) => {
-        const y = cy + 20 * Math.sin((2 * Math.PI * (50 + i)) / 100);
+      {new Array(100).fill(1).map((_, i) => {
+        const y = cy + 20 * Math.sin((2 * Math.PI * i) / 100);
         const x0 = 20 + 20 * Math.cos((2 * Math.PI * i) / 100);
         return (
           <g key={i}>
