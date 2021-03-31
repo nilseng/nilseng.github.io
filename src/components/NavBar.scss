@@ -1,0 +1,13 @@
+.nav-dropdown {
+  .btn.btn-dark {
+    background-color: transparent;
+    border-color: transparent;
+  }
+  .dropdown-menu {
+    background-color: #343a40;
+    .dropdown-item {
+      color: #f8f9fa;
+      background-color: #343a40;
+    }
+  }
+}

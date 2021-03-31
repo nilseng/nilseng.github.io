@@ -4,16 +4,13 @@ import Navbar from "react-bootstrap/Navbar";
 import DropdownButton from "react-bootstrap/DropdownButton";
 import Dropdown from "react-bootstrap/esm/Dropdown";
 
+import "./NavBar.scss";
+
 import AnimatedLogo from "./AnimatedLogo";
 
 const NavBar = () => {
   return (
-    <Navbar
-      bg="dark"
-      expand="md"
-      collapseOnSelect
-      className="border-bottom border-primary"
-    >
+    <Navbar expand="md" collapseOnSelect>
       <Navbar.Brand href="/" className="text-light">
         <AnimatedLogo color="#f8f9fa" height="2rem" width="2rem" />
         Teodor's Portfolio
@@ -31,14 +28,18 @@ const NavBar = () => {
             </Nav.Link>
           </Nav.Item>
           <Nav.Item>
-            <DropdownButton title="Finance" variant="dark">
+            <DropdownButton
+              title="Finance"
+              variant="dark"
+              className="nav-dropdown"
+            >
               <Dropdown.Item href="https://www.purewacc.com" target="_blank">
                 Pure WACC
               </Dropdown.Item>
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
-            <DropdownButton title="3D" variant="dark">
+            <DropdownButton title="3D" variant="dark" className="nav-dropdown">
               <Dropdown.Item href="/three?scene=spheres">
                 Rotating Spheres
               </Dropdown.Item>
@@ -49,7 +50,11 @@ const NavBar = () => {
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
-            <DropdownButton title="Math Graphics" variant="dark">
+            <DropdownButton
+              title="Math Graphics"
+              variant="dark"
+              className="nav-dropdown"
+            >
               <Dropdown.Item href="/mathematical-graphics/random-stars">
                 Stars
               </Dropdown.Item>
@@ -65,14 +70,22 @@ const NavBar = () => {
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
-            <DropdownButton title="Productivity" variant="dark">
+            <DropdownButton
+              title="Productivity"
+              variant="dark"
+              className="nav-dropdown"
+            >
               <Dropdown.Item href="https://www.pureokrs.com" target="_blank">
                 Pure OKRs
               </Dropdown.Item>
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
-            <DropdownButton title="Sports" variant="dark">
+            <DropdownButton
+              title="Sports"
+              variant="dark"
+              className="nav-dropdown"
+            >
               <Dropdown.Item
                 href="https://www.backcountrybook.com"
                 target="_blank"
