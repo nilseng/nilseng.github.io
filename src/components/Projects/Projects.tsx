@@ -13,7 +13,6 @@ const Projects = () => {
     <>
       <StarBackground />
       <Container className="py-4">
-        <h2 className="text-light">Projects</h2>
         <Carousel indicators={false}>
           <Carousel.Item>
             <a
