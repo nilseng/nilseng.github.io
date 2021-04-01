@@ -51,7 +51,7 @@ const NavBar = () => {
           </Nav.Item>
           <Nav.Item>
             <DropdownButton
-              title="Math Graphics"
+              title="Graphics"
               variant="dark"
               className="nav-dropdown"
             >
