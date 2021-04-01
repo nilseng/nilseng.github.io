@@ -14,7 +14,7 @@ const CircularAnimation = () => {
         const x0 = 20 + 20 * Math.cos((2 * Math.PI * i) / 100);
         return (
           <g key={i}>
-            <circle r={0.1} cy={y} fill="#f8f9fa">
+            <circle r={0.1} cy={y} cx={cx + x0} fill="#f8f9fa">
               <animate
                 attributeName="cx"
                 values={`
