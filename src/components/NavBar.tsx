@@ -23,7 +23,7 @@ const NavBar = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav defaultActiveKey="/home">
           <Nav.Item style={{ padding: "0.35rem 0.75rem" }}>
-            <Nav.Link className="text-light p-0" href="/blog">
+            <Nav.Link className="text-light p-0" href="/#blog">
               Blog
             </Nav.Link>
           </Nav.Item>
@@ -40,13 +40,13 @@ const NavBar = () => {
           </Nav.Item>
           <Nav.Item>
             <DropdownButton title="3D" variant="dark" className="nav-dropdown">
-              <Dropdown.Item href="/three?scene=spheres">
+              <Dropdown.Item href="/#three?scene=spheres">
                 Rotating Spheres
               </Dropdown.Item>
-              <Dropdown.Item href="/three?scene=boxes">
+              <Dropdown.Item href="/#three?scene=boxes">
                 Random boxes
               </Dropdown.Item>
-              <Dropdown.Item href="/3D?id=ball">Falling Ball</Dropdown.Item>
+              <Dropdown.Item href="/#3D?id=ball">Falling Ball</Dropdown.Item>
             </DropdownButton>
           </Nav.Item>
           <Nav.Item>
@@ -55,16 +55,16 @@ const NavBar = () => {
               variant="dark"
               className="nav-dropdown"
             >
-              <Dropdown.Item href="/mathematical-graphics/random-stars">
+              <Dropdown.Item href="/#mathematical-graphics/random-stars">
                 Stars
               </Dropdown.Item>
-              <Dropdown.Item href="/mathematical-graphics/circular-animation">
+              <Dropdown.Item href="/#mathematical-graphics/circular-animation">
                 Circle Animation
               </Dropdown.Item>
-              <Dropdown.Item href="/mathematical-graphics/sine-wave">
+              <Dropdown.Item href="/#mathematical-graphics/sine-wave">
                 Sine Waves
               </Dropdown.Item>
-              <Dropdown.Item href="/mathematical-graphics/sine-cosine-animation">
+              <Dropdown.Item href="/#mathematical-graphics/sine-cosine-animation">
                 Sine Cosine Animation
               </Dropdown.Item>
             </DropdownButton>
