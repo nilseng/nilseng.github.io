@@ -1,7 +1,5 @@
 import React from "react";
-import { Router, Switch, Route } from "react-router-dom";
-
-import history from "./utils/history";
+import { HashRouter, Switch, Route } from "react-router-dom";
 
 import NavBar from "./components/NavBar";
 import Blog from "./components/Blog/Blog";
@@ -14,7 +12,7 @@ import MathGraphicsRouter from "./components/MathGraphics/MathGraphicsRouter";
 const App = () => {
   return (
     <>
-      <Router history={history}>
+      <HashRouter>
         <NavBar />
         <Switch>
           <Route path="/" exact component={Projects} />
@@ -24,7 +22,7 @@ const App = () => {
           <Route path="/three" component={Scene} />
           <Route path="/mathematical-graphics" component={MathGraphicsRouter} />
         </Switch>
-      </Router>
+      </HashRouter>
     </>
   );
 };
