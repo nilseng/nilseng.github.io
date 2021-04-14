@@ -10,7 +10,7 @@ import AnimatedLogo from "./AnimatedLogo";
 
 const NavBar = () => {
   return (
-    <Navbar expand="md" collapseOnSelect>
+    <Navbar variant="dark" expand="md" collapseOnSelect>
       <Navbar.Brand href="/" className="text-light">
         <AnimatedLogo color="#f8f9fa" height="2rem" width="2rem" />
         Teodor's Portfolio
