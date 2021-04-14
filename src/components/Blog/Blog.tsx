@@ -16,37 +16,31 @@ const Blog = () => {
           interested in one of my projects.
         </div>
         <BlogPost
+          date="2021/04/14"
+          title="Github Pages"
+          content={[
+            `Quite happy with being able to move this web page (a React single page application) to Github pages today. The site was previously hosted on a free dyno on Heroku.
+            A big drawback with free dynos on Heroku is that they don't allow serving with https when using a custom domain (like nilseng.com in my case). Another quite annoying thing
+            is the 30 second or so delay users have to wait if the dyno is "sleeping". 
+            `,
+            `While being able to host the page for free, with https, a custom domain (which is almost free at Namecheap.com) and no sleeping dynos, I have to say having
+            to use a HashRouter instead of a normal Router from react-router is a big minus (there may be a way around this, but in case it's real hard to find). In addition, the 
+            docs where quite difficult to navigate. I should probably not be too surprised about a Microsoft company having Microsoft like docs though..
+            `,
+            `Anyways, farewell and thank you for your service free Heroku dynos, and welcome to my life Github Pages <3.`,
+          ]}
+        />
+        <BlogPost
           date="2020/10/25"
           title="Basic physics + three.js"
           content={[
             `Going back to school and the 3 equations of motion today to create a
-          rolling and falling ball animation.`,
+          rolling/falling ball animation with earth like gravity.`,
             `The ball is rendered
           using three.js.`,
           ]}
           link="/3D?id=ball"
         />
-        {/* <div className="bg-dark rounded p-4 my-4">
-        <p className="text-muted">
-          {new Date("2020/10/25").toLocaleString(undefined, {
-            weekday: "long",
-            year: "numeric",
-            month: "long",
-            day: "numeric",
-          })}
-          :
-        </p>
-        <h5>How to animate a falling and rolling ball.</h5>
-        <div>
-          Going back to school and the 3 equations of motion today to create the
-          rolling and falling ball background animation. The ball is rendered
-          using three.js. The ball's position is changed incrementally, assuming
-          60 frames per second. The speed in x direction is kept constant, while
-          the speed in y direction is increasing due to gravity until it hits
-          the plane. And then it falls off, accellerating with 9.81m/s^2 again.
-          <BackgroundAnimation />
-        </div>
-      </div> */}
         <BlogPost
           date="2020/10/25"
           title="Apartment sold!"
