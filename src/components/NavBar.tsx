@@ -58,6 +58,9 @@ const NavBar = () => {
               <Dropdown.Item href="/#mathematical-graphics/random-stars">
                 Stars
               </Dropdown.Item>
+              <Dropdown.Item href="/#mathematical-graphics/random-web">
+                Web
+              </Dropdown.Item>
               <Dropdown.Item href="/#mathematical-graphics/circular-animation">
                 Circle Animation
               </Dropdown.Item>

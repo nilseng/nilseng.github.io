@@ -2,6 +2,8 @@ import React from "react";
 import { match, Route, Switch } from "react-router-dom";
 import CircularAnimation from "./CircularAnimation";
 import RandomPaths from "./RandomPaths";
+import { RandomWeb } from "./RandomWeb";
+import { ShootingStars } from "./ShootingStars";
 import SineCosineAnimation from "./SineCosineAnimation";
 import SineWave from "./SineWave";
 import StarBackground from "./StarBackground";
@@ -24,6 +26,8 @@ const MathGraphicsContainer = ({ match }: IProps) => {
         component={CircularAnimation}
       />
       <Route path={`${match.url}/random-paths`} component={RandomPaths} />
+      <Route path={`${match.url}/shooting-stars`} component={ShootingStars} />
+      <Route path={`${match.url}/random-web`} component={RandomWeb} />
     </Switch>
   );
 };
