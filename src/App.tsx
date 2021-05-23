@@ -14,15 +14,15 @@ const App = () => {
   return (
     <>
       <HashRouter>
-        {/* <NavBar /> */}
+        <NavBar />
         <Switch>
-          <Route path="/" exact component={Birthday} />
-          <Route path="/projects" component={Projects} />
+          <Route path="/" exact component={Projects} />
           <Route path="/blog" component={Blog} />
           <Route path="/3D" component={Three} />
           <Route path="/boxes" component={Boxes} />
           <Route path="/three" component={Scene} />
           <Route path="/mathematical-graphics" component={MathGraphicsRouter} />
+          <Route path="/birthday" component={Birthday} />
         </Switch>
       </HashRouter>
     </>
