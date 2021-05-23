@@ -8,14 +8,16 @@ import Projects from "./components/Projects/Projects";
 import Boxes from "./components/3D/Boxes";
 import Scene from "./components/3D/Scene";
 import MathGraphicsRouter from "./components/MathGraphics/MathGraphicsRouter";
+import { Birthday } from "./components/Birthday/Birthday";
 
 const App = () => {
   return (
     <>
       <HashRouter>
-        <NavBar />
+        {/* <NavBar /> */}
         <Switch>
-          <Route path="/" exact component={Projects} />
+          <Route path="/" exact component={Birthday} />
+          <Route path="/projects" component={Projects} />
           <Route path="/blog" component={Blog} />
           <Route path="/3D" component={Three} />
           <Route path="/boxes" component={Boxes} />
