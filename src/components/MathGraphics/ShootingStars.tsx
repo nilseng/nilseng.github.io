@@ -6,9 +6,18 @@ const drawShootingStar = (
   context: CanvasRenderingContext2D,
   star: ShootingStar
 ) => {
+  const grad = context.createLinearGradient(star.x1, star.y1, star.x2, star.y2);
+  grad.addColorStop(0, "#FCAF82");
+  grad.addColorStop(1, "#A7D4FF");
+  context.strokeStyle = grad;
   context.moveTo(star.x1, star.y1);
   context.lineTo(star.x2, star.y2);
   context.stroke();
+
+  context.beginPath();
+  context.arc(star.x2, star.y2, 2, 0, 2 * Math.PI);
+  context.fillStyle = "#A7D4FF";
+  context.fill();
 };
 
 interface ShootingStar {
@@ -64,7 +73,6 @@ export const ShootingStars = () => {
       const context = canvas?.getContext("2d");
 
       if (context) {
-        context.strokeStyle = "#ffffff";
         context.fillStyle = "#ffffff";
 
         let requestId: number,
@@ -75,6 +83,8 @@ export const ShootingStars = () => {
         const render = () => {
           context.clearRect(0, 0, canvas.width, canvas.height);
           i += 0.01;
+
+          // Rendering stars
           stars.forEach((star) => {
             context.beginPath();
             context.arc(
@@ -86,7 +96,10 @@ export const ShootingStars = () => {
             );
             context.fill();
           });
-          if (requestId % 120 === 0) {
+
+          // Rendering shooting stars
+
+          if (requestId % 60 === 0) {
             const x = Math.random() * canvas.width;
             const y = Math.random() * canvas.height;
             const direction = {
@@ -102,12 +115,11 @@ export const ShootingStars = () => {
             };
           } else {
             if (shootingStar) {
-              console.log(shootingStar);
               shootingStar = {
                 x1: shootingStar.x1 + shootingStar.direction.x,
                 y1: shootingStar.y1 + shootingStar.direction.y,
-                x2: shootingStar.x2 + 2 * shootingStar.direction.x,
-                y2: shootingStar.y2 + 2 * shootingStar.direction.y,
+                x2: shootingStar.x2 + 4 * shootingStar.direction.x,
+                y2: shootingStar.y2 + 4 * shootingStar.direction.y,
                 direction: shootingStar.direction,
               };
               drawShootingStar(context, shootingStar);

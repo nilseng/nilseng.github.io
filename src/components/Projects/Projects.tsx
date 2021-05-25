@@ -6,12 +6,12 @@ import Carousel from "react-bootstrap/Carousel";
 import pureokrsImg from "./images/pureokrs.png";
 import purewaccImg from "./images/purewacc.png";
 import bcbookImg from "./images/backcountrybook.png";
-import StarBackground from "../MathGraphics/StarBackground";
+import { ShootingStars } from "../MathGraphics/ShootingStars";
 
 const Projects = () => {
   return (
     <>
-      <StarBackground />
+      <ShootingStars />
       <Container className="py-4">
         <Carousel indicators={false}>
           <Carousel.Item>
