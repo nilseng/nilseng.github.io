@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.072fa81c.chunk.css",
-    "main.js": "/static/js/main.e66fa756.chunk.js",
-    "main.js.map": "/static/js/main.e66fa756.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.ab8bc3d3.js",
-    "runtime-main.js.map": "/static/js/runtime-main.ab8bc3d3.js.map",
+    "main.css": "/static/css/main.fde64418.chunk.css",
+    "main.js": "/static/js/main.03e6f6f3.chunk.js",
+    "main.js.map": "/static/js/main.03e6f6f3.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ec439fc5.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ec439fc5.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.b4a14ae6.chunk.js": "/static/js/2.b4a14ae6.chunk.js",
-    "static/js/2.b4a14ae6.chunk.js.map": "/static/js/2.b4a14ae6.chunk.js.map",
-    "static/js/3.aa07c548.chunk.js": "/static/js/3.aa07c548.chunk.js",
-    "static/js/3.aa07c548.chunk.js.map": "/static/js/3.aa07c548.chunk.js.map",
+    "static/js/2.7209150b.chunk.js": "/static/js/2.7209150b.chunk.js",
+    "static/js/2.7209150b.chunk.js.map": "/static/js/2.7209150b.chunk.js.map",
+    "static/js/3.e4ddc8f6.chunk.js": "/static/js/3.e4ddc8f6.chunk.js",
+    "static/js/3.e4ddc8f6.chunk.js.map": "/static/js/3.e4ddc8f6.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.072fa81c.chunk.css.map": "/static/css/main.072fa81c.chunk.css.map",
-    "static/js/2.b4a14ae6.chunk.js.LICENSE.txt": "/static/js/2.b4a14ae6.chunk.js.LICENSE.txt",
+    "static/css/main.fde64418.chunk.css.map": "/static/css/main.fde64418.chunk.css.map",
+    "static/js/2.7209150b.chunk.js.LICENSE.txt": "/static/js/2.7209150b.chunk.js.LICENSE.txt",
     "static/media/518_62667910.29f88455.jpg": "/static/media/518_62667910.29f88455.jpg",
     "static/media/backcountrybook.01af885d.png": "/static/media/backcountrybook.01af885d.png",
     "static/media/muttern.610864f1.jpeg": "/static/media/muttern.610864f1.jpeg",
@@ -22,10 +22,10 @@
     "static/media/romsdalseggen.1de48101.jpg": "/static/media/romsdalseggen.1de48101.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ab8bc3d3.js",
+    "static/js/runtime-main.ec439fc5.js",
     "static/css/2.4c97ca4f.chunk.css",
-    "static/js/2.b4a14ae6.chunk.js",
-    "static/css/main.072fa81c.chunk.css",
-    "static/js/main.e66fa756.chunk.js"
+    "static/js/2.7209150b.chunk.js",
+    "static/css/main.fde64418.chunk.css",
+    "static/js/main.03e6f6f3.chunk.js"
   ]
 }
