@@ -33,15 +33,18 @@ interface ShootingStar {
 
 export const ShootingStars = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const bgCanvasRef = useRef<HTMLCanvasElement>(null);
   const { width, height } = useWindowDimensions();
 
   const [stars, setStars] = useState<[number, number, number][]>([]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
+    const bgCanvas = bgCanvasRef.current;
     const context = canvas?.getContext("2d");
+    const bgContext = bgCanvas?.getContext("2d");
 
-    if (canvas) {
+    if (canvas && bgCanvas) {
       const ratio = getPixelRatio(context);
       const canvasWidth = getComputedStyle(canvas)
         .getPropertyValue("width")
@@ -54,6 +57,21 @@ export const ShootingStars = () => {
       canvas.height = +canvasHeight * ratio;
       canvas.style.width = `${width}px`;
       canvas.style.height = `${height}px`;
+
+      bgCanvas.width = +canvasWidth * ratio;
+      bgCanvas.height = +canvasHeight * ratio;
+      bgCanvas.style.width = `${width}px`;
+      bgCanvas.style.height = `${height}px`;
+
+      if (bgContext) {
+        const grd = bgContext.createLinearGradient(0, bgCanvas.height, 0, 0);
+        grd.addColorStop(0, "rgba(88,88,124,0.5)");
+        grd.addColorStop(1, "rgba(0,0,0,0)");
+
+        // Fill with gradient
+        bgContext.fillStyle = grd;
+        bgContext.fillRect(0, 0, bgCanvas.width, bgCanvas.height);
+      }
 
       setStars(
         new Array(1000)
@@ -139,13 +157,23 @@ export const ShootingStars = () => {
   }, [stars, height, width]);
 
   return (
-    <canvas
-      ref={canvasRef}
-      id="myCanvas"
-      className="fixed-top"
-      style={{ zIndex: -1 }}
-      width={width}
-      height={height}
-    ></canvas>
+    <>
+      <canvas
+        ref={bgCanvasRef}
+        className="fixed-top"
+        id="bgCanvas"
+        style={{ zIndex: -2 }}
+        width={width}
+        height={height}
+      ></canvas>
+      <canvas
+        ref={canvasRef}
+        id="myCanvas"
+        className="fixed-top"
+        style={{ zIndex: -1 }}
+        width={width}
+        height={height}
+      ></canvas>
+    </>
   );
 };
