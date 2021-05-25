@@ -64,7 +64,12 @@ export const ShootingStars = () => {
       bgCanvas.style.height = `${height}px`;
 
       if (bgContext) {
-        const grd = bgContext.createLinearGradient(0, bgCanvas.height, 0, 0);
+        const grd = bgContext.createLinearGradient(
+          0,
+          bgCanvas.height,
+          bgCanvas.width / 8,
+          0
+        );
         grd.addColorStop(0, "rgba(88,88,124,0.5)");
         grd.addColorStop(1, "rgba(0,0,0,0)");
 
