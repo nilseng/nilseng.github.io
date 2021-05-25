@@ -1,13 +1,13 @@
 import React from "react";
 import Container from "react-bootstrap/esm/Container";
-import StarBackground from "../MathGraphics/StarBackground";
+import { ShootingStars } from "../MathGraphics/ShootingStars";
 import BlogPost from "./BlogPost";
 import apartment from "./images/518_62667910.jpg";
 
 const Blog = () => {
   return (
     <>
-      <StarBackground />
+      <ShootingStars />
       <Container>
         <div className="bg-dark text-light rounded p-4 my-4">
           I'm Teodor Nilseng Danielsen. A Norwegian software engineer and
