@@ -13,7 +13,7 @@ const Projects = () => {
     <>
       <ShootingStars />
       <Container className="py-4">
-        <Carousel indicators={false}>
+        <Carousel indicators={false} interval={10000}>
           <Carousel.Item>
             <a
               href="https://www.backcountrybook.com"
