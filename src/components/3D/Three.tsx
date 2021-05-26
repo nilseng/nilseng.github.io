@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useLocation } from "react-router-dom";
 import * as THREE from "three";
+import { ShootingStars } from "../MathGraphics/ShootingStars";
 import scenes from "./scenes.json";
 import { createMesh, IMeshConfig } from "./utils";
 
@@ -34,7 +35,6 @@ const init = (mainEl: React.RefObject<HTMLDivElement>, config: IScene) => {
   camera.position.z = config.camera?.position?.z;
 
   scene = new THREE.Scene();
-  scene.background = new THREE.Color(config.bgColor);
 
   if (config.meshes) {
     for (const meshConfig of config.meshes) {
@@ -54,7 +54,7 @@ const init = (mainEl: React.RefObject<HTMLDivElement>, config: IScene) => {
 
   // Adding light
   const pointLight = new THREE.PointLight(0xffffff, 2);
-  pointLight.position.set(1, 4, 10);
+  pointLight.position.set(-5, -10, 20);
   pointLight.castShadow = true;
   scene.add(pointLight);
 
@@ -64,7 +64,8 @@ const init = (mainEl: React.RefObject<HTMLDivElement>, config: IScene) => {
   pointLight.shadow.camera.near = 0.5;
   pointLight.shadow.camera.far = 500;
 
-  renderer = new THREE.WebGLRenderer({ antialias: true });
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setClearColor(0x000000, 0);
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -72,9 +73,11 @@ const init = (mainEl: React.RefObject<HTMLDivElement>, config: IScene) => {
   mainEl.current?.appendChild(renderer.domElement);
 };
 
+let requestId: number;
+
 const animate = () => {
   if (sphere) {
-    requestAnimationFrame(animate);
+    requestId = requestAnimationFrame(animate);
     sphere.position.x += 0.05;
     sphere.position.y +=
       sphere.position.y >= -1.5 || sphere.position.x > 2.5
@@ -116,16 +119,25 @@ const Three = () => {
   useEffect(() => {
     if (mainEl && config) {
       init(mainEl, config);
+      animate();
     }
+    return () => cancelAnimationFrame(requestId);
   }, [mainEl, config]);
 
-  animate();
   return (
-    <div
-      ref={mainEl}
-      className="h-100 w-100"
-      style={{ position: "absolute", top: 0, left: 0, zIndex: -1 }}
-    ></div>
+    <>
+      <ShootingStars />
+      <div
+        ref={mainEl}
+        className="h-100 w-100"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          zIndex: -1,
+        }}
+      ></div>
+    </>
   );
 };
 

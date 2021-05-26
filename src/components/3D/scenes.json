@@ -2,7 +2,6 @@
   "scenes": [
     {
       "id": "ball",
-      "bgColor": "#f8f9fa",
       "camera": {
         "fov": 50,
         "position": {
@@ -24,7 +23,8 @@
           "material": {
             "type": "standard",
             "parameters": {
-              "color": "#f8f9fa"
+              "color": "#212529",
+              "opacity": 0.1
             }
           },
           "position": [0, -2, 0],
