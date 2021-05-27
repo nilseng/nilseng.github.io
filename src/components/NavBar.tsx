@@ -85,12 +85,6 @@ const NavBar = () => {
             >
               Sine Waves
             </NavDropdown.Item>
-            <NavDropdown.Item
-              className="small"
-              href="/#mathematical-graphics/sine-cosine-animation"
-            >
-              Sine Cosine Animation
-            </NavDropdown.Item>
           </NavDropdown>
           <NavDropdown
             className="small"
