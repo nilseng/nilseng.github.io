@@ -55,8 +55,8 @@ export const ShootingStars = () => {
           bgCanvas.width / 8,
           0
         );
-        grd.addColorStop(0, "rgba(88,88,124,0.5)");
-        grd.addColorStop(1, "rgba(0,0,0,0)");
+        grd.addColorStop(0, "#444466");
+        grd.addColorStop(1, "#212529");
 
         // Fill with gradient
         bgContext.fillStyle = grd;
