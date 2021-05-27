@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
+import { setCanvasStyleRatio } from "../../utils/canvasResolution";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { getPixelRatio } from "../common/utils";
 
 const drawShootingStar = (
   context: CanvasRenderingContext2D,
@@ -45,23 +45,8 @@ export const ShootingStars = () => {
     const bgContext = bgCanvas?.getContext("2d");
 
     if (canvas && bgCanvas) {
-      const ratio = getPixelRatio(context);
-      const canvasWidth = getComputedStyle(canvas)
-        .getPropertyValue("width")
-        .slice(0, -2);
-      const canvasHeight = getComputedStyle(canvas)
-        .getPropertyValue("height")
-        .slice(0, -2);
-
-      canvas.width = +canvasWidth * ratio;
-      canvas.height = +canvasHeight * ratio;
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
-
-      bgCanvas.width = +canvasWidth * ratio;
-      bgCanvas.height = +canvasHeight * ratio;
-      bgCanvas.style.width = `${width}px`;
-      bgCanvas.style.height = `${height}px`;
+      setCanvasStyleRatio(canvas, context, width, height);
+      setCanvasStyleRatio(bgCanvas, bgContext, width, height);
 
       if (bgContext) {
         const grd = bgContext.createLinearGradient(

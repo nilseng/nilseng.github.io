@@ -1,10 +1,14 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
-import { getPixelRatio } from "../common/utils";
+import { getPixelRatio } from "../../utils/canvasResolution";
+
+import "../Birthday/Birthday.scss";
 
 export const RandomWeb = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const { width, height } = useWindowDimensions();
+
+  const [isLolVisible, setIsLolVisible] = useState(false);
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -50,16 +54,36 @@ export const RandomWeb = () => {
         };
       }
     }
-  });
+  }, [height, width]);
+
+  useEffect(() => {
+    setTimeout(() => setIsLolVisible(true), 2000);
+  }, []);
 
   return (
-    <canvas
-      ref={canvasRef}
-      id="myCanvas"
-      className="fixed-top"
-      style={{ zIndex: -1 }}
-      width={width}
-      height={height}
-    ></canvas>
+    <>
+      <div
+        className="fixed-top vw-100 vh-100 d-flex align-items-center justify-content-center"
+        style={{ zIndex: -1 }}
+      >
+        <h1
+          className="spin-2s delay-2s"
+          style={{
+            color: "red",
+            visibility: isLolVisible ? "visible" : "hidden",
+          }}
+        >
+          lol
+        </h1>
+      </div>
+      <canvas
+        ref={canvasRef}
+        id="myCanvas"
+        className="fixed-top"
+        style={{ zIndex: -2 }}
+        width={width}
+        height={height}
+      ></canvas>
+    </>
   );
 };

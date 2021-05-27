@@ -12,16 +12,3 @@ export const getRandomBlue = () => {
     var color = `#0000${letters[Math.floor(Math.random() * 16)]}${letters[Math.floor(Math.random() * 16)]}`;
     return color;
 }
-
-export const getPixelRatio = (context: any) => {
-    const backingStore =
-        context.backingStorePixelRatio ||
-        context.webkitBackingStorePixelRatio ||
-        context.mozBackingStorePixelRatio ||
-        context.msBackingStorePixelRatio ||
-        context.oBackingStorePixelRatio ||
-        context.backingStorePixelRatio ||
-        1;
-
-    return (window.devicePixelRatio || 1) / backingStore;
-};

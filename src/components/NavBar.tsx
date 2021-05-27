@@ -63,6 +63,12 @@ const NavBar = () => {
             </NavDropdown.Item>
             <NavDropdown.Item
               className="small"
+              href="/#mathematical-graphics/bezier-waves"
+            >
+              Bezier Waves
+            </NavDropdown.Item>
+            <NavDropdown.Item
+              className="small"
               href="/#mathematical-graphics/random-web"
             >
               Web
