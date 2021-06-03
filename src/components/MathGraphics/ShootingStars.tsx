@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { setCanvasStyleRatio } from "../../utils/canvasResolution";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
+import Image from "react-bootstrap/esm/Image";
+import moon from "./moon.png";
 
 const drawShootingStar = (
   context: CanvasRenderingContext2D,
@@ -148,6 +150,19 @@ export const ShootingStars = () => {
 
   return (
     <>
+      <Image
+        src={moon}
+        style={{
+          position: "absolute",
+          top: 0,
+          right: 0,
+          height: "2rem",
+          margin: "3rem",
+        }}
+        onClick={() =>
+          window.alert("Please be respectful and leave the moon alone!")
+        }
+      />
       <canvas
         ref={bgCanvasRef}
         className="fixed-top"
