@@ -107,12 +107,12 @@ export const ShootingStars = () => {
 
           // Rendering shooting stars
 
-          if (requestId % 60 === 0) {
+          if (requestId % 240 === 0) {
             const x = Math.random() * canvas.width;
             const y = Math.random() * canvas.height;
             const direction = {
               x: 2 * Math.random() - 1,
-              y: 2 * Math.random() - 1,
+              y: Math.random(),
             };
             shootingStar = {
               x1: x,
@@ -121,7 +121,7 @@ export const ShootingStars = () => {
               y2: y,
               direction: direction,
             };
-          } else {
+          } else if (requestId % 240 < 40) {
             if (shootingStar) {
               shootingStar = {
                 x1: shootingStar.x1 + shootingStar.direction.x,
