@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.8ed980c8.chunk.css",
-    "main.js": "/static/js/main.c781adb7.chunk.js",
-    "main.js.map": "/static/js/main.c781adb7.chunk.js.map",
+    "main.js": "/static/js/main.95135e17.chunk.js",
+    "main.js.map": "/static/js/main.95135e17.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ec439fc5.js",
     "runtime-main.js.map": "/static/js/runtime-main.ec439fc5.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
@@ -15,7 +15,7 @@
     "static/css/main.8ed980c8.chunk.css.map": "/static/css/main.8ed980c8.chunk.css.map",
     "static/js/2.4611e083.chunk.js.LICENSE.txt": "/static/js/2.4611e083.chunk.js.LICENSE.txt",
     "static/media/518_62667910.29f88455.jpg": "/static/media/518_62667910.29f88455.jpg",
-    "static/media/backcountrybook.01af885d.png": "/static/media/backcountrybook.01af885d.png",
+    "static/media/backcountrybook2.5ed4c532.png": "/static/media/backcountrybook2.5ed4c532.png",
     "static/media/moon.5e596c07.png": "/static/media/moon.5e596c07.png",
     "static/media/muttern.610864f1.jpeg": "/static/media/muttern.610864f1.jpeg",
     "static/media/pureokrs.5dc1eb44.png": "/static/media/pureokrs.5dc1eb44.png",
@@ -27,6 +27,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.4611e083.chunk.js",
     "static/css/main.8ed980c8.chunk.css",
-    "static/js/main.c781adb7.chunk.js"
+    "static/js/main.95135e17.chunk.js"
   ]
 }
