@@ -5,7 +5,7 @@ import Carousel from "react-bootstrap/Carousel";
 
 import pureokrsImg from "./images/pureokrs.png";
 import purewaccImg from "./images/purewacc.png";
-import bcbookImg from "./images/backcountrybook.png";
+import bcbookImg from "./images/backcountrybook2.png";
 import { ShootingStars } from "../MathGraphics/ShootingStars";
 
 const Projects = () => {
@@ -24,7 +24,7 @@ const Projects = () => {
                 title="BackcountryBook.com"
                 content={[
                   `BackcountryBook - an application for exploring and sharing backcountry skiing experiences. Share routes and images. Explore mountains in 2D or 3D.`,
-                  `Stack: React, Node.js, Express, MongoDB, AWS S3`,
+                  `Built with React, Node.js, Express, MongoDB, AWS S3, Mapbox, Auth0 and more.`,
                 ]}
                 picture={bcbookImg}
               />
