@@ -3,7 +3,7 @@ import { useHistory } from "react-router-dom";
 
 interface IProps {
   date?: string;
-  title: string;
+  title?: string;
   content: string[];
   picture?: string;
   link?: string;
@@ -22,11 +22,15 @@ const BlogPost = ({
 
   return (
     <div
-      className="bg-dark rounded p-4 my-4"
+      className="rounded p-5 my-4"
       onClick={() => (link ? history.push(link) : null)}
-      style={link ? { cursor: "pointer" } : {}}
+      style={
+        link
+          ? { cursor: "pointer", backgroundColor: "rgba(52, 58, 64, 0.4)" }
+          : { backgroundColor: "rgba(52, 58, 64, 0.4)" }
+      }
     >
-      <h5 className="text-light">{title}</h5>
+      {title && <h5 className="text-light">{title}</h5>}
       {date && (
         <p className="text-muted">
           {new Date(date).toLocaleString(undefined, {
@@ -40,7 +44,7 @@ const BlogPost = ({
       {picture && (
         <img
           src={picture}
-          className="w-100 border-0"
+          className="w-100 border-0 pb-4"
           alt="apartment"
           loading="eager"
         />
