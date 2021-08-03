@@ -21,7 +21,6 @@ const Projects = () => {
               style={{ textDecoration: "none" }}
             >
               <BlogPost
-                title="BackcountryBook.com"
                 content={[
                   `BackcountryBook - an application for exploring and sharing backcountry skiing experiences. Share routes and images. Explore mountains in 2D or 3D.`,
                   `Built with React, Node.js, Express, MongoDB, AWS S3, Mapbox, Auth0 and more.`,
@@ -37,7 +36,6 @@ const Projects = () => {
               style={{ textDecoration: "none" }}
             >
               <BlogPost
-                title="PureWACC.com"
                 content={[
                   `Pure Weighted Average Cost of Capital - an application simplifying calculation and distribution of WACCs for multi market and multi industry projects.`,
                   `Stack: React, Node.js, Express, MongoDB`,
@@ -53,7 +51,6 @@ const Projects = () => {
               style={{ textDecoration: "none" }}
             >
               <BlogPost
-                title="PureOKRs.com"
                 content={[
                   `Pure Objectives and Key Result - a goal management application.`,
                   `Stack: Angular, Node.js, Express, MongoDB`,
