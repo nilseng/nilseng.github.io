@@ -9,6 +9,7 @@ import Boxes from "./components/3D/Boxes";
 import Scene from "./components/3D/Scene";
 import MathGraphicsRouter from "./components/MathGraphics/MathGraphicsRouter";
 import { Birthday } from "./components/Birthday/Birthday";
+import { UserInfo } from "./components/UserInfo/UserInfo";
 
 const App = () => {
   return (
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/three" component={Scene} />
           <Route path="/mathematical-graphics" component={MathGraphicsRouter} />
           <Route path="/birthday" component={Birthday} />
+          <Route path="/user-info" component={UserInfo} />
         </Switch>
       </HashRouter>
     </>
