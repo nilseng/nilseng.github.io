@@ -24,11 +24,10 @@ const BlogPost = ({
     <div
       className="p-5 my-4"
       onClick={() => (link ? history.push(link) : null)}
-      style={
-        link
-          ? { cursor: "pointer", backgroundColor: "rgba(52, 58, 64, 0.4)" }
-          : { backgroundColor: "rgba(52, 58, 64, 0.4)" }
-      }
+      style={{
+        cursor: link ? "pointer" : "",
+        backgroundColor: "rgba(52, 58, 64, 0.4)",
+      }}
     >
       {title && <h5 className="text-light">{title}</h5>}
       {date && (
