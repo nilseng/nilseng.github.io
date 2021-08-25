@@ -22,7 +22,7 @@ const BlogPost = ({
 
   return (
     <div
-      className="p-5 my-4"
+      className="p-sm-5 p-3 my-4"
       onClick={() => (link ? history.push(link) : null)}
       style={{
         cursor: link ? "pointer" : "",
