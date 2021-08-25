@@ -6,6 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 import pureokrsImg from "./images/pureokrs.png";
 import purewaccImg from "./images/purewacc.png";
 import bcbookImg from "./images/backcountrybook2.png";
+import norskeAksjerImg from "./images/norske_aksjer.png";
 import { ShootingStars } from "../MathGraphics/ShootingStars";
 
 const Projects = () => {
@@ -26,6 +27,21 @@ const Projects = () => {
                   `Built with React, Node.js, Express, MongoDB, AWS S3, Mapbox, Auth0 and more.`,
                 ]}
                 picture={bcbookImg}
+              />
+            </a>
+          </Carousel.Item>
+          <Carousel.Item>
+            <a
+              href="https://norske-aksjer.herokuapp.com"
+              target="__blank"
+              style={{ textDecoration: "none" }}
+            >
+              <BlogPost
+                content={[
+                  `Search for and find all Norwegian companies and their shareholders.`,
+                  `Built with React, Node.js, Express, MongoDB and more.`,
+                ]}
+                picture={norskeAksjerImg}
               />
             </a>
           </Carousel.Item>
