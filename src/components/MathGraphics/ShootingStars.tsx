@@ -158,6 +158,7 @@ export const ShootingStars = () => {
           right: 0,
           height: "2rem",
           margin: "3rem",
+          cursor: "pointer",
         }}
         onClick={() =>
           window.alert("Please be respectful and leave the moon alone!")
