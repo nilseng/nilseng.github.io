@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.8ed980c8.chunk.css",
-    "main.js": "/static/js/main.2778e5f0.chunk.js",
-    "main.js.map": "/static/js/main.2778e5f0.chunk.js.map",
+    "main.js": "/static/js/main.6d7ad77f.chunk.js",
+    "main.js.map": "/static/js/main.6d7ad77f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.312ab061.js",
     "runtime-main.js.map": "/static/js/runtime-main.312ab061.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
@@ -18,7 +18,7 @@
     "static/media/backcountrybook2.5ed4c532.png": "/static/media/backcountrybook2.5ed4c532.png",
     "static/media/moon.5e596c07.png": "/static/media/moon.5e596c07.png",
     "static/media/muttern.610864f1.jpeg": "/static/media/muttern.610864f1.jpeg",
-    "static/media/norske_aksjer.97e4bf87.png": "/static/media/norske_aksjer.97e4bf87.png",
+    "static/media/norske_aksjer.9e2e3162.png": "/static/media/norske_aksjer.9e2e3162.png",
     "static/media/pureokrs.5dc1eb44.png": "/static/media/pureokrs.5dc1eb44.png",
     "static/media/purewacc.481e41cb.png": "/static/media/purewacc.481e41cb.png",
     "static/media/romsdalseggen.1de48101.jpg": "/static/media/romsdalseggen.1de48101.jpg"
@@ -28,6 +28,6 @@
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.d9aff1ce.chunk.js",
     "static/css/main.8ed980c8.chunk.css",
-    "static/js/main.2778e5f0.chunk.js"
+    "static/js/main.6d7ad77f.chunk.js"
   ]
 }
